@@ -1,0 +1,67 @@
+import java.util.Scanner;
+
+public class SwitchStatementDriver {
+	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
+		int jobTenureInYears = scan.nextInt();
+		int derogCreditMarksInLast3Years = scan.nextInt();
+		int income = scan.nextInt();  
+
+public class SwitchStatement {
+	private int income;
+	private int jobTenureInYears;
+	private int derogCreditMarksInLast3Years;
+	private double rate = 5.99;
+	private double highRiskBump = 0.5;
+	private String thankApplicant = "Congratulations and thanks for considering the offer.";
+	boolean firstRateApplicant = (income > 120_000 && jobTenureInYears >= 5 && derogCreditMarksInLast3Years <= 0);
+	boolean secondRateApplicant = (income >= 120_000 && jobTenureInYears >= 4 && derogCreditMarksInLast3Years <= 1);
+	boolean thirdRateApplicant = (income >= 90_000 && jobTenureInYears >= 3 && derogCreditMarksInLast3Years <= 2);
+	boolean fourthRateApplicant = (income >= 70_000 && jobTenureInYears >= 2 && derogCreditMarksInLast3Years <= 4);
+	boolean fifthRateApplicant = (income >= 50_000 && jobTenureInYears >= 2 && derogCreditMarksInLast3Years <= 5);
+	boolean sixthRateApplicant = (income >= 40_000 && jobTenureInYears >= 2 && derogCreditMarksInLast3Years <= 5);
+	int applicantApprovalRate = 1;
+	switch (applicantApprovalRate) {
+		case 1:
+		if (firstRateApplicant = true)
+			System.out.println("You've qualified for the best loan available: " + rate + "% " + thankApplicant);
+		break;
+
+	case 2:
+		if (secondRateApplicant = true)
+			System.out.println("You've qualified for a great loan: " + (rate + highRiskBump) + "% " + thankApplicant);
+		break;
+
+	case 3:
+		if (thirdRateApplicant = true)
+			System.out.println(
+					"You've qualified for a good loan: " + (rate + (highRiskBump * 2)) + "% " + thankApplicant);
+		break;
+
+	case 4:
+		if (fourthRateApplicant = true)
+			System.out
+					.println("You've qualfied for a loan: " + (rate + (highRiskBump * 3)) + "% " + thankApplicant);
+		break;
+
+	case 5:
+		if (fifthRateApplicant = true)
+			System.out.println(
+					"You've qualified for a loan: " + (rate + (highRiskBump * 4)) + "% " + "Congratulations. ");
+		break;
+
+	case 6:
+		if (sixthRateApplicant = true)
+			System.out.println(
+					"You've qualified for a loan: " + (rate + (highRiskBump * 5)) + "% " + "Congratulations. ");
+		break;
+
+	default:
+		System.out.println("Please see a loan officer for further assistance in loan qualifying.  Thank you.");
+		break;
+	}
+	scan.close();
+}
+}
+}
+}
